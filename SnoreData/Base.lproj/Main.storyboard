@@ -185,6 +185,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CkI-tN-eWR">
                                         <rect key="frame" x="170.5" y="212" width="34" height="391"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="save:" destination="hiz-gl-AKx" eventType="touchUpInside" id="7CI-FJ-sec"/>
+                                        </connections>
+                                    </button>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m0f-CW-86C">
+                                        <rect key="frame" x="111" y="603" width="153" height="0.0"/>
+                                        <state key="normal" title="Delete Family Member"/>
+                                        <connections>
+                                            <action selector="deleteFamilyMember:" destination="hiz-gl-AKx" eventType="touchUpInside" id="ENe-zP-vjN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -198,6 +208,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="YUm-mN-v4J"/>
                     </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="wHO-QW-gxW" id="L9l-Uv-zbM"/>
+                        <outlet property="deleteButton" destination="m0f-CW-86C" id="1wM-ec-8T3"/>
+                        <outlet property="nameTextField" destination="6KN-pR-JBl" id="kuT-EV-b8N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Fq-PU-bmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -232,6 +247,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bHJ-PQ-0Zc">
                                         <rect key="frame" x="170.5" y="529" width="34" height="30"/>
                                         <state key="normal" title="Save"/>
+                                        <connections>
+                                            <action selector="savedButton:" destination="ve7-YG-XLi" eventType="touchUpInside" id="ydM-KP-Kgd"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -245,6 +263,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="HAg-xE-TV4"/>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="flV-pt-T58" id="Srg-4R-Hgy"/>
+                        <outlet property="hoursInput" destination="7r0-eT-q0M" id="H09-hk-lc0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b61-8T-bjc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

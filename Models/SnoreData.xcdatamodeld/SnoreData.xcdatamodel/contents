@@ -1,4 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18C54" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="FamilyMember" representedClassName="FamilyMember" syncable="YES" codeGenerationType="class">
+        <attribute name="age" attributeType="Integer 16" minValueString="0" maxValueString="130" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" attributeType="String" minValueString="1" maxValueString="50" syncable="YES"/>
+        <relationship name="sleepRecords" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SleepRecord" inverseName="familyMember" inverseEntity="SleepRecord" syncable="YES"/>
+    </entity>
+    <entity name="SleepRecord" representedClassName="SleepRecord" syncable="YES" codeGenerationType="class">
+        <attribute name="date" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="hours" attributeType="Float" minValueString="0" maxValueString="24" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="familyMember" maxCount="1" deletionRule="Nullify" destinationEntity="FamilyMember" inverseName="sleepRecords" inverseEntity="FamilyMember" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="FamilyMember" positionX="-54" positionY="-9" width="128" height="90"/>
+        <element name="SleepRecord" positionX="-36" positionY="9" width="128" height="90"/>
+    </elements>
 </model>
